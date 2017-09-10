@@ -5,7 +5,7 @@
  * Date		September 2017
  *
  * Description
- * 	2D and 3D kinematics simulation.
+ * 	Simple 2D and 3D kinematics simulation.
  *	Still needs a lot of improvements.
  *
  *
