@@ -41,9 +41,7 @@ matrix matrix::product(matrix mat)
 				float sum = 0;
 
 				for (uint j = 1; j <= num_cols(); ++j) // for each of our columns
-				{
 					sum += get(i, j) * mat(j, k);
-				}
 
 				result(i, k) = sum;
 			}
@@ -68,7 +66,7 @@ float& matrix::get(uint r, uint c)
 vec2 matrix::to_vec2()
 {
 	// floats are manually casted to uints (and are thus rounded)
-	return vec2(int(get(1,1)), int(get(2,1)));
+	return vec2(get(1,1), get(2,1));
 }
 
 vec3 matrix::to_vec3()
@@ -84,7 +82,7 @@ float& matrix::operator()(uint iRow, uint iColumn)
 void matrix::operator*(float scalar)
 {
 	for (uint i = 0; i < m.size(); ++i)
-	{	m.at(i) *= scalar;			}
+		m.at(i) *= scalar;
 }
 
 matrix matrix::operator*(matrix matrix)
@@ -109,9 +107,7 @@ void matrix::print()
 		std::cout << "[";
 
 		for (uint j = 1; j <= num_cols(); ++j)
-		{
 			std::cout << " " << get(i,j) << " ";
-		}
 
 		std::cout << "]" << std::endl;
 	}

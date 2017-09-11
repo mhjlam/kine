@@ -18,6 +18,21 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\constants.h" />
+    <ClInclude Include="src\kine2d.h" />
+    <ClInclude Include="src\kine3d.h" />
+    <ClInclude Include="src\matrix.h" />
+    <ClInclude Include="src\stickler.h" />
+    <ClInclude Include="src\structures.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\kine2d.cpp" />
+    <ClCompile Include="src\kine3d.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\matrix.cpp" />
+    <ClCompile Include="src\stickler.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{B4DC0BE2-B217-4A76-8EE6-9A421D56233D}</ProjectGuid>
@@ -153,21 +168,6 @@
       <Command>xcopy /y /d  "$(SolutionDir)freeglut-3.0.0\bin\x64\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="constants.h" />
-    <ClInclude Include="stickler.h" />
-    <ClInclude Include="structures.h" />
-    <ClInclude Include="kine2d.h" />
-    <ClInclude Include="kine3d.h" />
-    <ClInclude Include="matrix.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="kine2d.cpp" />
-    <ClCompile Include="kine3d.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="matrix.cpp" />
-    <ClCompile Include="stickler.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
